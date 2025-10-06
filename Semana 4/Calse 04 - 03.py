@@ -38,3 +38,4 @@ print(min(my_string)) #Retorna el caracter con el valor ASCII mas bajo. En este 
 print(max(my_string)) #Retorna el caracter con el valor ASCII mas alto. En este caso, J.
 
 print(my_string.count("A")) #Contar cuantas veces aparece un caracter en el string. En este caso, 4.
+
