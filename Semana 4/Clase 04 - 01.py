@@ -21,8 +21,9 @@ print (type(media_edad))
 print(type(cantidad_alumnos)is int)  #no es lo mismo a la expresion "int". int =/ a "int"
 print(type(media_edad)is int)  #no es lo mismo a la expresion "int". int =/ a "int"
 
-""" Un algoritmo produce una entrada y una salida, realiza una serie de pasos ordenados y finitos y nos resuelve un problema. 
-"Type" es una funcion que retorna el tipo de dato de la variable que yo estoy propocionando""" 
+""" Un algoritmo produce una entrada y una salida, realiza una serie de pasos ordenados y finitos 
+y nos resuelve un problema. "Type" es una funcion que retorna el tipo de dato de la variable que 
+yo estoy propocionando""" 
 
 print ("el usuario es", usuario, "y tiene", cantidad_alumnos, "pajaritos en su aula")
 print ("la edad promedio es de", media_edad)
@@ -48,4 +49,5 @@ apellido = "Portillo"
 nombre_completo = nombre + " " + apellido  #Concatenacion de strings. Solo se puede concatenar strings con strings, no con otros tipos de datos.
 print(nombre_completo)
 
-""" Python es un lenguaje de tipado dinamico, es decir, no es necesario declarar el tipo de dato de una variable al momento de crearla."""
+""" Python es un lenguaje de tipado dinamico, es decir, no es necesario declarar el tipo de dato 
+de una variable al momento de crearla."""

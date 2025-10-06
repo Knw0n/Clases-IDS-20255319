@@ -1,0 +1,1 @@
+print(my_string.count("A")) #Contar cuantas veces aparece un caracter en el string. En este caso, 4.
