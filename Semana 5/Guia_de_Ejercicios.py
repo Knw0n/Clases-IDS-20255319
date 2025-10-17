@@ -114,10 +114,22 @@ print(palabra_usuario2[0], palabra_usuario2[-1]) """
 
 #ejercicio 1
 
-frase = "La programacion es increible"
+"""frase = "La programacion es increible"
 
 if 'poderosa' in frase:
-    print("'Poderosa' esta en la frase")
+    print("La palabra 'Poderosa' esta en la frase")
     
 else:
-    print("'Poderosa' no esta en la frase")
+    print("La palabra 'Poderosa' no esta en la frase")
+"""
+
+"""palabra = "hola"
+
+print(palabra*5)"""
+
+"""texto = "banana" 
+print(texto.count('a'))"""
+
+"""mensaje = "El Salvador es un gran país"
+
+print(mensaje.index('gran'))"""

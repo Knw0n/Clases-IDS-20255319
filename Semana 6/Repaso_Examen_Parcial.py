@@ -384,4 +384,51 @@ print(producto)
 
 """
 
+###################################################
 
+"""EJERCICIOS DE CONTROL2"""
+
+###################################################
+
+"""EJERCICIO C 
+
+menu = ("Hamburgesa", "Hotdog", "Pizza", "Taccos", "Lasaña", "Ensalada", "Pupusas", "Burrito", "Alitas de pollo", "Papas fritas")
+
+precios = [3.52, 55.15, 4.25, 60.25, 5.65, 3.15, 2.65, 70.75, 6.25, 2.55]
+
+numero = int(input())
+nuevo_precio = float(input())
+
+precios[(numero)-1] = nuevo_precio
+
+print(f"Los precios actualizados son: [{precios}]")"""
+
+###################################################
+
+"""EJERCICIO D
+
+correo = input()
+
+veri_1 = correo.count('@') == 1
+veri_2 = correo[0] != "@"
+veri_3 = correo[:-1] != "@"
+
+print (f" Contiene exactamente un @: {veri_1}")
+print(f"El @ no está ubicado al inicio del correo: {veri_2}")
+print(f"El @ no está ubicado al final del correo: {veri_3}")
+
+"""
+
+###################################################
+
+"""EJERCICIO E
+
+n1 = float(input())
+n2 = float(input())
+n3 = float(input())
+n4 = float(input())
+n5 = float(input())
+
+nota_final = float((n1*.15) + (n2*.4) + (n3*.25) + (n4*.20) + (n5*.05))
+
+print(f"La nota final es: {nota_final:.2f}")"""
