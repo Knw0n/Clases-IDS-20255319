@@ -37,23 +37,25 @@ def registrar_estudiantes():
     
 def inscribir_en_curso():
     """Inscribir estudiantes al curso"""
+while True:
     carnet = input("Ingrese el carnet del estudiante (o 'salir'): ")
+    
     if carnet.lower() == "salir":
-            return
+        return
     if carnet == "":
             print("El carnet no puede estar vacio.")
-        
         
         #Validar que el carnet exista
     carnet_existe = False
     for estu in dat.estudiantes:
         if estu["carnet"].lower() == carnet.lower():
-            carnet_existe == True
+            carnet_existe = True
             break
-            
-        if not carnet_existe:
+        
+    if not carnet_existe:
             print("El carnet no existe. Intente nuevamente.")
             continue
+        
     while True: 
         #Mostrar cursos disponibles
         print("Cursos disponibles: ")
@@ -73,12 +75,13 @@ def inscribir_en_curso():
             if insc["carnet"] == carnet and insc["curso"] == codigo:
                 ya_inscrito = True
             
-            dat.inscripciones.append({
-                "carnet": carnet,
-                "curso": codigo
+        dat.inscripciones.append({
+            "carnet": carnet,
+            "curso": codigo
             })
-            print("Curso inscrito con exito.")
+        
+        print("Curso inscrito con exito.")
             
-            seguir = input("¿Desea inscribir otro curso? (s/n): ")
-            if seguir.lower() == "s":
-                break
+        seguir = input("¿Desea inscribir otro curso? (s/n): ")
+        if seguir.lower() == "s":
+            break
