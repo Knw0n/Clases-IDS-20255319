@@ -13,8 +13,10 @@ while True:
     opcion = input("Elija una opcion 1-4: ")
     if opcion == "1":
         fn.registrar_estudiantes()
+        
     elif opcion == "2":
-        print("Ha elegido la opcion 2.")
+        fn.inscribir_en_curso()
+        
     elif opcion == "3":
         print("Ha elegido la opcion 3.")
     elif opcion == "4":

@@ -37,27 +37,48 @@ def registrar_estudiantes():
     
 def inscribir_en_curso():
     """Inscribir estudiantes al curso"""
-    while True: 
-        carnet = input("Ingrese el carnet del estudiante (o 'salir'): ")
-        if carnet.lower() = "salir":
+    carnet = input("Ingrese el carnet del estudiante (o 'salir'): ")
+    if carnet.lower() == "salir":
             return
-        if carnet == "":
+    if carnet == "":
             print("El carnet no puede estar vacio.")
-            continue
+        
         
         #Validar que el carnet exista
-        carnet_existe = False
-        for estu in dat.estudiantes:
-            if estu["carnet"].lower() == carnet.lower():
-                carnet_existe == True
-                break
+    carnet_existe = False
+    for estu in dat.estudiantes:
+        if estu["carnet"].lower() == carnet.lower():
+            carnet_existe == True
+            break
             
         if not carnet_existe:
             print("El carnet no existe. Intente nuevamente.")
             continue
-        
+    while True: 
         #Mostrar cursos disponibles
         print("Cursos disponibles: ")
         for codigo in dat.cursos:
             print(codigo, "->", dat.cursos[codigo])
+            
+        codigo = input("Digite el codigo del curso (o escriba salir): ")
         
+        if codigo.lower() == "salir":
+            print("Regresando al menú principal")
+            continue
+        if codigo not in dat.cursos:
+            print("Código de curso inválido. Porfavor intentar de nuevo.")
+            continue #pedir otro codigo
+        ya_inscrito = False
+        for insc in dat.inscripciones:
+            if insc["carnet"] == carnet and insc["curso"] == codigo:
+                ya_inscrito = True
+            
+            dat.inscripciones.append({
+                "carnet": carnet,
+                "curso": codigo
+            })
+            print("Curso inscrito con exito.")
+            
+            seguir = input("¿Desea inscribir otro curso? (s/n): ")
+            if seguir.lower() == "s":
+                break
