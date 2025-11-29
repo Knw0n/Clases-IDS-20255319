@@ -34,4 +34,30 @@ def registrar_estudiantes():
         "nombre": nombre_i,
         "apellido": apellido_i
     })
+    
+def inscribir_en_curso():
+    """Inscribir estudiantes al curso"""
+    while True: 
+        carnet = input("Ingrese el carnet del estudiante (o 'salir'): ")
+        if carnet.lower() = "salir":
+            return
+        if carnet == "":
+            print("El carnet no puede estar vacio.")
+            continue
+        
+        #Validar que el carnet exista
+        carnet_existe = False
+        for estu in dat.estudiantes:
+            if estu["carnet"].lower() == carnet.lower():
+                carnet_existe == True
+                break
+            
+        if not carnet_existe:
+            print("El carnet no existe. Intente nuevamente.")
+            continue
+        
+        #Mostrar cursos disponibles
+        print("Cursos disponibles: ")
+        for codigo in dat.cursos:
+            print(codigo, "->", dat.cursos[codigo])
         
